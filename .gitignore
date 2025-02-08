@@ -1,0 +1,17 @@
+# Исключить системные и временные файлы
+.DS_Store
+.Trash/
+*.log
+*.tmp
+
+# Node.js
+node_modules/
+.env
+
+# IDE и редакторы
+.idea/
+.vscode/
+*.iml
+
+# MacOS специфичные
+._*
