@@ -20,5 +20,8 @@ app.get("/", (req, res) => {
     res.send("Welcome to the Book Management API");
 });
 
+const weatherRoutes = require("./src/routes/weatherRoutes");
+app.use("/api", weatherRoutes);
+
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
