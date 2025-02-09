@@ -2,7 +2,7 @@ const express = require("express");
 const Book = require("../models/Book");
 const router = express.Router();
 
-// GET /books: Fetch all books
+
 router.get("/:id", async (req, res) => {
     try {
         const books = await Book.findById(req.params.id);
@@ -13,7 +13,6 @@ router.get("/:id", async (req, res) => {
     }
 });
 
-// POST /books: Add a new book
 router.post("/", async (req, res) => {
     const { title, author, year, genre } = req.body;
 
@@ -30,7 +29,6 @@ router.post("/", async (req, res) => {
     }
 });
 
-// PUT /books/:id: Update a book’s details
 router.put("/:id", async (req, res) => {
     try {
         const book = await Book.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -41,7 +39,6 @@ router.put("/:id", async (req, res) => {
     }
 });
 
-// DELETE /books/:id: Delete a book
 router.delete("/:id", async (req, res) => {
     try {
         const book = await Book.findByIdAndDelete(req.params.id);
