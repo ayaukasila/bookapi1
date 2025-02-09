@@ -3,11 +3,12 @@ const Book = require("../models/Book");
 const router = express.Router();
 
 // GET /books: Fetch all books
-router.get("/", async (req, res) => {
+router.get("/:id", async (req, res) => {
     try {
-        const books = await Book.find();
-        res.json(books);
-    } catch (error) {
+        const books = await Book.findById(req.params.id);
+    if (!books) return res.status(404).json({ error: "Книга не найдена" });
+     res.json(book); }
+    catch (error) {
         res.status(500).json({ error: "Ошибка сервера" });
     }
 });
