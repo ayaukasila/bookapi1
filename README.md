@@ -29,3 +29,31 @@ How to Use
 	1.	Open Postman 
 	2.	Send requests to the base URL: https://bookapi1.onrender.com
 
+Weather API Endpoint
+
+1. GET /api/weather/:city
+This endpoint fetches the current weather data for a given city using the OpenWeather API.
+
+How to Use
+	1.	Open Postman or any API testing tool.
+	2.	Use the base URL: https://bookapi1.onrender.com.
+	3.	Test the following endpoints:
+	•	/books for book management operations.
+	•	/api/weather/:city for fetching weather data
+
+Setup Instructions
+	1.	Clone the repository:
+    git clone https://github.com/your-username/book-management-api.git
+cd book-management-api
+
+	2.	Install dependencies: npm install
+    3.	Create a .env file and add your MongoDB URI and OpenWeather API Key:
+   MONGO_URI=mongodb+srv://ayaulymorynbassarova222:w0vol2xmDSbWX1wM@web.xgkgf.mongodb.net/?retryWrites=true&w=majority&appName=web
+WEATHER_API_KEY=60a685e91e82eaff1494be23be6f6c6c
+
+    Dependencies
+	•	Node.js: Backend framework
+	•	Express.js: Web framework for Node.js
+	•	Mongoose: MongoDB object modeling tool
+	•	Axios: HTTP client for making API requests
+
